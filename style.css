@@ -1,0 +1,332 @@
+body {
+  margin: 0;
+  background: url('wandljk_kl_png_V1.jpeg') no-repeat center center;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+}
+
+#gameCanvas {
+  position: absolute;
+  top: 7px;
+  left: 50%;
+  transform: translateX(calc(-50% - 1px)); /* 5px extra naar links */
+  width: 640px;
+  height: 595px;
+  background-color: transparent;
+  border: 3px solid transparent;
+  z-index: 18;
+}
+
+#player-display {
+  position: absolute;
+  top: 50px;
+  left: 100px;
+  font-size: 18px;
+  color: white;
+  z-index: 999;
+}
+
+#scoreDisplay {
+  position: absolute;
+  top: 33px;         /* pas aan voor waar jij ’m wilt */
+  left: 1125px;       /* pas aan op je layout */
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  z-index: 555;
+  pointer-events: none;
+  user-select: none;
+}
+
+
+
+body {
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+}
+
+#highscore-overlay {
+  position: absolute;
+  top: 270px;
+  left: 40px;
+  width: 200px;
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+  font-size: 12px;
+  z-index: 99;
+}
+#highscore-overlay h2 {
+  text-align: center;
+  margin: 5px 0;
+}
+#highscore-overlay ol {
+  list-style-type: none;
+  padding-left: 20px;
+  margin: 0;
+}
+
+#trophy {
+  position: absolute;
+  top: 70px;       /* verplaats verticaal */
+  left: 140px;    /* verplaats horizontaal */
+  width: 100px;    /* grootte aanpassen */
+  z-index: 1000;   /* altijd zichtbaar bovenop */
+}
+
+
+#game-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-left: 10px;
+  margin-top: 15px;
+}
+
+#login-overlay {
+  position: absolute;
+  top: 90px;
+  right: 30px;
+  left: auto;
+  text-align: right;
+  z-index: 999;
+}
+
+#login-box {
+  display: inline-block;
+}
+
+#playerName {
+  position: absolute;
+  top: 120px;
+  left: 740px;
+  color: #008CFF;
+  font-size: 20px;
+  font-family: Arial, sans-serif;
+  z-index: 800;
+}
+
+#time-box {
+  position: absolute;
+  top: 36px;          /* verticaal afstellen */
+  left: 1275px;       /* horizontaal afstellen zodat hij in het TIME-vakje past */
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  z-index: 1056;
+  pointer-events: none;
+}
+
+#timeDisplay {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+}
+
+
+#highscore-overlay ol li {
+  margin-bottom: 10px;
+  white-space: nowrap;
+}
+
+@keyframes scrollText {
+  from { transform: translateX(100%); }
+  to   { transform: translateX(-100%); }
+}
+
+#bikeFlyby {
+  width: 120px;
+  height: auto;
+  z-index: 1;
+}
+
+#bikeFlyer {
+  position: absolute;
+  width: 150px;
+  height: auto;
+  display: none;
+  will-change: transform, left, top;
+  z-index: 1;
+  pointer-events: none;
+}
+
+#bike-layer {
+  pointer-events: none;
+  overflow: hidden;
+}
+
+#musicToggle {
+  position: fixed;
+  left: 40px;
+  bottom: 20px;
+  width: 180px;
+  cursor: pointer;
+  z-index: 777;
+  transition: transform 0.2s ease;
+}
+
+#musicToggle:hover {
+  transform: scale(1.05);
+}
+
+#rocketFlame {
+  position: absolute;
+  width: 20px;
+  height: 40px;
+  background: radial-gradient(ellipse at center, orange 0%, red 60%, transparent 100%);
+  border-radius: 50%;
+  display: none;
+  z-index: 1;
+  filter: blur(1px);
+  animation: flameFlicker 0.15s infinite alternate;
+}
+
+@keyframes flameFlicker {
+  0% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1.2) rotate(5deg);
+    opacity: 0.5;
+  }
+}
+/* ===== Chat Box styles ===== */
+/* was: position:absolute;  -> maak 'm fixed */
+#chatbox{
+  position: fixed;
+  right: 30px;
+  top: 160px;
+  width: 300px;
+  height: 360px;
+  display: flex;
+  flex-direction: column;
+  z-index: 9998;
+  font-family: system-ui, Arial, sans-serif;
+  border-radius: 18px;
+  background: linear-gradient(#f6a53b,#e27e22);
+  box-shadow: 0 8px 20px rgba(0,0,0,.35), inset 0 0 0 4px #c76b12, inset 0 0 0 8px #ffc85a;
+  overflow: hidden;
+  max-width: 90vw;            /* extra veiligheid op smalle schermen */
+}
+
+
+#chatbox .chatbox-header{
+  height:42px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 12px 0 16px;
+  background: linear-gradient(#ffd56a,#ffb12b);
+  color:#7a2b00;
+  font-weight:800;
+  letter-spacing:.5px;
+  border-bottom:2px solid #b66414;
+}
+
+#chatClearBtn{
+  border:none;
+  background:rgba(0,0,0,.08);
+  color:#7a2b00;
+  width:28px;height:28px; border-radius:8px; cursor:pointer;
+}
+#chatClearBtn:hover{ background:rgba(0,0,0,.16); }
+
+#chatMessages{
+  flex: 1;
+  padding: 10px 10px 6px 10px;
+  background: #6a0f0f;
+  color: #ffe9c4;
+  border-top: 2px solid #ffcf62;
+  border-bottom: 2px solid #b66414;
+  overflow-y: auto;
+  overflow-x: auto;      /* <-- horizontale balk alleen hier */
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+
+.chat-text{
+  font-size: 13px;
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+
+
+
+
+.chat-msg{
+  background: rgba(255,255,255,.06);
+  border:1px solid rgba(255,200,90,.35);
+  padding:6px 8px;
+  margin-bottom:6px;
+  border-radius:10px;
+  word-break:break-word;
+  line-height:1.2;
+  box-shadow: inset 0 0 8px rgba(0,0,0,.15);
+}
+.chat-meta{
+  font-size:11px; opacity:.8; margin-bottom:2px; color:#ffdfa0;
+}
+.chat-text{ font-size:13px; }
+
+#chatForm { display:flex; gap:6px; padding:8px; background: linear-gradient(#ffb545,#f08a25); border-top:2px solid #b66414; }
+#chatForm input{
+  flex: 1;
+  min-width: 0;              /* ← essentieel: mag krimpen in flex */
+  height: 34px;
+  border: none; outline: none;
+  border-radius: 10px;
+  padding: 0 10px;
+  background: #fff5e3;
+}
+#chatInput{
+  white-space: nowrap;       /* één regel */
+  overflow: hidden;
+  text-overflow: ellipsis;   /* laat '...' zien bij superlange strings */
+}
+
+#chatName{ flex:0 0 98px; }
+#chatForm button{
+  flex:0 0 46px;
+  border:none; cursor:pointer;
+  border-radius:10px;
+  background:#7a2b00; color:#ffd56a; font-weight:700;
+}
+
+
+#chatForm button:hover{ filter:brightness(1.08); }
+/* ===== /Chat Box styles ===== */
+
+/* Header-knopjes uniform */
+.chat-icon-btn{
+  border:none; background:rgba(0,0,0,.08); color:#7a2b00;
+  width:28px; height:28px; border-radius:8px; cursor:pointer;
+}
+.chat-icon-btn:hover{ background:rgba(0,0,0,.16); }
+
+/* Ingeklapt: alleen header zichtbaar */
+#chatbox.collapsed{ height:42px; overflow:hidden; }
+#chatbox.collapsed #chatMessages,
+#chatbox.collapsed #chatForm{ display:none; }
+
+/* Pijltje draait als open */
+#chatbox:not(.collapsed) #chatToggleBtn{ transform: rotate(90deg); }
+#chatbox.collapsed #chatToggleBtn{ transform: rotate(0deg); }
+
+
+
+
+
+
+
+
+
